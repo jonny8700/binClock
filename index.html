@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binary-clock</title>
+    <script src="js/color.js"></script>
+    <script src="js/binuhr.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171583735-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-171583735-1');
+    </script>
+</head>
+<body onload="binUhr(); window.focus()">
+<div style="margin-left: 6em; margin-bottom: 4em; font-size: x-large;" class="bodyHead">
+    <h1>Binär Uhr</h1>
+</div>
+<div style="margin-left: 4em;">
+    <svg id="cWhite" width="600" height="300" viewbox="0 0 60 30">
+        <circle cx="3" cy="15" r="3" fill="black"/>   <!--hh-->
+        <circle id="binUhrcircle15" cx="3" cy="15" r="2.8" fill="white"/>
+        <circle cx="3" cy="21" r="3" fill="black"/>
+        <circle id="binUhrcircle14" cx="3" cy="21" r="2.8" fill="white"/> <!--hh-->
+        <circle cx="9" cy="3" r="3" fill="black"/>   <!--h-->
+        <circle id="binUhrcircle13" class="cWhite" cx="9" cy="3" r="2.8" fill="white"/>
+        <circle cx="9" cy="9" r="3" fill="black"/>
+        <circle id="binUhrcircle12" class="cWhite" cx="9" cy="9" r="2.8" fill="white"/>
+        <circle cx="9" cy="15" r="3" fill="black"/>
+        <circle id="binUhrcircle11" class="cWhite" cx="9" cy="15" r="2.8" fill="white"/>
+        <circle cx="9" cy="21" r="3" fill="black"/>
+        <circle id="binUhrcircle10" class="cWhite" cx="9" cy="21" r="2.8" fill="white"/>  <!--h-->
+        <circle cx="16" cy="9" r="3" fill="black"/>   <!--mm-->
+        <circle id="binUhrcircle06" cx="16" cy="9" r="2.8" fill="white"/>
+        <circle cx="16" cy="15" r="3" fill="black"/>
+        <circle id="binUhrcircle05" cx="16" cy="15" r="2.8" fill="white"/>
+        <circle cx="16" cy="21" r="3" fill="black"/>
+        <circle id="binUhrcircle04" cx="16" cy="21" r="2.8" fill="white"/> <!--mm-->
+        <circle cx="22" cy="3" r="3" fill="black"/>   <!--m-->
+        <circle id="binUhrcircle03" cx="22" cy="3" r="2.8" fill="white"/>
+        <circle cx="22" cy="9" r="3" fill="black"/>
+        <circle id="binUhrcircle02" cx="22" cy="9" r="2.8" fill="white"/>
+        <circle cx="22" cy="15" r="3" fill="black"/>
+        <circle id="binUhrcircle01" cx="22" cy="15" r="2.8" fill="white"/>
+        <circle cx="22" cy="21" r="3" fill="black"/>
+        <circle id="binUhrcircle00" cx="22" cy="21" r="2.8" fill="white"/>  <!--m-->
+        <circle cx="29" cy="9" r="3" fill="black"/>   <!--ss-->
+        <circle id="binUhrcircle6" cx="29" cy="9" r="2.8" fill="white"/>
+        <circle cx="29" cy="15" r="3" fill="black"/>
+        <circle id="binUhrcircle5" cx="29" cy="15" r="2.8" fill="white"/>
+        <circle cx="29" cy="21" r="3" fill="black"/>
+        <circle id="binUhrcircle4" cx="29" cy="21" r="2.8" fill="white"/> <!--ss-->
+        <circle cx="35" cy="3" r="3" fill="black"/>   <!--s-->
+        <circle id="binUhrcircle3" cx="35" cy="3" r="2.8" fill="white"/>
+        <circle cx="35" cy="9" r="3" fill="black"/>
+        <circle id="binUhrcircle2" cx="35" cy="9" r="2.8" fill="white"/>
+        <circle cx="35" cy="15" r="3" fill="black"/>
+        <circle id="binUhrcircle1" cx="35" cy="15" r="2.8" fill="white"/>
+        <circle cx="35" cy="21" r="3" fill="black"/>
+        <circle id="binUhrcircle0" cx="35" cy="21" r="2.8" fill="white"/>  <!--s-->
+    </svg>
+</div>
+<div style="width: 150px; height: 150px; margin-left: 12em;">
+    <!--<button onclick="binUhr()">Start binary clock</button> -->
+    <p id="myOutput">© Johannes Sattler SWD 19 - 2020</p>
+</div>
+</body>
+</html>

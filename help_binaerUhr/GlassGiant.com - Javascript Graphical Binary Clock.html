@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0055)http://www.glassgiant.com/geek/binaryclock/binclock.php -->
+<html wtx-context="5DECD71B-F6C0-4D3B-BA5B-140B1B2D5109"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GlassGiant.com - Javascript Graphical Binary Clock</title>
+<script language="javascript">
+
+var grayimg = new Image();
+grayimg.src = "img/binclock_gray.gif";
+
+var redimg = new Image();
+redimg.src = "img/binclock_red.gif";
+
+function timeit()
+{
+timenow = new Date();
+liteup("h1", Math.floor(timenow.getHours() / 10));
+liteup("h2", timenow.getHours() % 10);
+liteup("m1", Math.floor(timenow.getMinutes() / 10));
+liteup("m2", timenow.getMinutes() % 10);
+liteup("s1", Math.floor(timenow.getSeconds() / 10));
+liteup("s2", timenow.getSeconds() % 10);
+setTimeout("timeit()", 1000);
+}
+
+function liteup(col, num)
+{
+if (num % 2 == 1)
+eval("document." + col + "1.src = redimg.src");
+else
+eval("document." + col + "1.src = grayimg.src");
+
+if (num == 2 || num == 3 ||num == 6 || num == 7)
+eval("document." + col + "2.src = redimg.src");
+else
+eval("document." + col + "2.src = grayimg.src");
+
+if (num <= 7 && num >= 4)
+eval("document." + col + "4.src = redimg.src");
+else
+eval("document." + col + "4.src = grayimg.src");
+
+if (num >= 8)
+eval("document." + col + "8.src = redimg.src");
+else
+eval("document." + col + "8.src = grayimg.src");
+
+return true;
+}
+//-->
+</script>
+</head>
+<!-- window.focus() -> bringt das gewünschte Fenster in den Vordergrund -->
+<body onload="timeit(); window.focus()" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0" marginheight="0" marginwidth="0" bgcolor="#000000"><table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+    <tbody><tr>
+    <td valign="middle" align="center"><table cellpadding="0" cellspacing="0" border="0">
+    <tbody>
+        <tr>
+            <td valign="bottom">
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="h18" id="h18" hspace="3" vspace="3" style="visibility:hidden"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="h14" id="h14" hspace="3" vspace="3" style="visibility:hidden"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="h12" id="h12" hspace="3" vspace="3"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="h11" id="h11" hspace="3" vspace="3">
+            </td>
+
+            <td valign="bottom">
+                <img src="img/binclock_red.gif" height="10" width="10" border="0" alt="" name="h28" id="h28" hspace="3" vspace="3"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="h24" id="h24" hspace="3" vspace="3"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="h22" id="h22" hspace="3" vspace="3"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="h21" id="h21" hspace="3" vspace="3">
+            </td>
+
+            <td valign="bottom">
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="m18" hspace="3" vspace="3" style="visibility:hidden"><br>
+                <img src="img/binclock_red.gif" height="10" width="10" border="0" alt="" name="m14" hspace="3" vspace="3"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="m12" hspace="3" vspace="3"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="m11" hspace="3" vspace="3">
+            </td>
+
+            <td valign="bottom">
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="m28" hspace="3" vspace="3"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="m24" hspace="3" vspace="3"><br>
+                <img src="img/binclock_red.gif" height="10" width="10" border="0" alt="" name="m22" hspace="3" vspace="3"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="m21" hspace="3" vspace="3">
+            </td>
+
+            <td valign="bottom">
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="s18" hspace="3" vspace="3" style="visibility:hidden"><br>
+                <img src="img/binclock_red.gif" height="10" width="10" border="0" alt="" name="s14" hspace="3" vspace="3"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="s12" hspace="3" vspace="3"><br>
+                <img src="img/binclock_red.gif" height="10" width="10" border="0" alt="" name="s11" hspace="3" vspace="3">
+            </td>
+
+            <td valign="bottom">
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="s28" hspace="3" vspace="3"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="s24" hspace="3" vspace="3"><br>
+                <img src="img/binclock_red.gif" height="10" width="10" border="0" alt="" name="s22" hspace="3" vspace="3"><br>
+                <img src="img/binclock_gray.gif" height="10" width="10" border="0" alt="" name="s21" hspace="3" vspace="3">
+            </td>
+        </tr>
+    </tbody></table></td>
+    </tr></tbody></table>
+
+</body></html>
